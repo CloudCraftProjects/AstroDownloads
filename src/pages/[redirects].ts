@@ -7,19 +7,27 @@ export const getStaticPaths = () => {
 };
 
 export const GET: APIRoute = async () => {
-  const projects = await getCollection("projects");
-  const redirectsContent = projects
-    .filter((project) => project.data.download && project.data.download.link)
-    .flatMap((project) => {
-      const allPaths = [];
-      allPaths.push(`download/${project.id}`);
-      if (project.data.paths) {
-        allPaths.push(project.data.paths);
-      }
-      return allPaths.map((path) => `/${path} ${project.data.download!.link} 301`);
-    })
-    .join("\n");
-  return new Response(redirectsContent, {
+  const redirects: string[] = [];
+
+  const projects = (await getCollection("projects")).filter((project) => project.data.download && project.data.download.link);
+  redirects.push("\n# project downloads");
+  projects.flatMap((project) => `/download/${project.id} ${project.data.download!.link} 303`).forEach((redirect) => redirects.push(redirect));
+  redirects.push("\n# project redirects");
+  projects
+    .filter((project) => project.data.paths)
+    .flatMap((project) => project.data.paths!.map((path) => `/${path} /download/${project.id} 301`))
+    .forEach((redirect) => redirects.push(redirect));
+
+  const tools = (await getCollection("tools")).filter((tool) => tool.data.download);
+  redirects.push("\n# tool downloads");
+  tools.flatMap((project) => `/download/tool/${project.id} ${project.data.download!} 303`).forEach((redirect) => redirects.push(redirect));
+  redirects.push("\n# tool redirects");
+  tools
+    .filter((project) => project.data.paths)
+    .flatMap((project) => project.data.paths!.map((path) => `/${path} /download/tool/${project.id} 301`))
+    .forEach((redirect) => redirects.push(redirect));
+
+  return new Response(redirects.join("\n"), {
     headers: {
       "Content-Type": "text/plain; charset=utf-8",
     },

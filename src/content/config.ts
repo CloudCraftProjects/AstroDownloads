@@ -17,4 +17,14 @@ const projects = defineCollection({
   }),
 });
 
-export const collections = { projects };
+const tools = defineCollection({
+  type: "data",
+  schema: z.object({
+    title: z.string(),
+    github: z.string(),
+    download: z.string().optional(),
+    paths: z.array(z.string()).optional(),
+  }),
+});
+
+export const collections = { projects, tools };
