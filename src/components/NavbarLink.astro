@@ -1,0 +1,16 @@
+---
+import Link from "./Link.astro";
+
+interface Props {
+  icon: string[];
+  href: string;
+  noActive?: boolean;
+}
+
+const { icon, href, noActive } = Astro.props;
+const active = !noActive && (Astro.url.pathname === href + "/" || Astro.url.pathname === href);
+---
+
+<Link icon={icon} href={href} bold={active} noColor>
+  <slot />
+</Link>

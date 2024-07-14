@@ -1,0 +1,36 @@
+---
+import NavbarLink from "./NavbarLink.astro";
+---
+
+<nav>
+  <div class="container">
+    <div class="brand">
+      <NavbarLink icon={["solid", "cloud"]} href="/" noActive>Downloads</NavbarLink>
+    </div>
+    <div class="nodes">
+      <NavbarLink icon={["solid", "newspaper"]} href="/">Projects</NavbarLink>
+      <NavbarLink icon={["solid", "tools"]} href="/tools/">Tools</NavbarLink>
+      <NavbarLink icon={["solid", "globe"]} href="https://cloudcraftmc.de/">Hauptseite</NavbarLink>
+    </div>
+  </div>
+</nav>
+<style>
+  nav {
+    background-color: rgb(33, 37, 41);
+    padding: 1em;
+    font-size: large;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    max-width: var(--content-width);
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .container > .nodes {
+    display: flex;
+    gap: 1em;
+  }
+</style>
