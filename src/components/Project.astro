@@ -15,6 +15,14 @@ const downloadLink = entry.data.download?.link ? `/download/${entry.id}` : undef
 
 <div class="box">
   <h3>{entry.data.title}</h3>
+  {
+    entry.data.description && (
+      <>
+        <span>{entry.data.description}</span>
+        <hr />
+      </>
+    )
+  }
   <ul>
     {
       entry.data.start && (
@@ -47,11 +55,11 @@ const downloadLink = entry.data.download?.link ? `/download/${entry.id}` : undef
   }
   h3 {
     font-weight: bold;
-	margin-bottom: 1em;
+    margin-bottom: 1em;
   }
   ul {
     padding-left: 1em;
     margin-bottom: 0em;
-	margin-top: 0em;
+    margin-top: 0em;
   }
 </style>
