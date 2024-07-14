@@ -3,12 +3,33 @@ import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import Project from "../components/Project.astro";
 
-const projects = await getCollection("projects");
+// always ignore all unstarted projects
+const allProjects = (await getCollection("projects")).filter((project) => project.data.start).sort((a, b) => b.data.start!.valueOf() - a.data.start!.valueOf());
+const finishedProjects = allProjects.filter((project) => project.data.end);
+const activeProjects = allProjects.filter((project) => !project.data.end);
 ---
 
 <Layout title="Home" description="Übersichtsseite über alle vergangen Projekte von CloudCraft und deren jeweilige Downloadlinks" keywords={["home"]}>
-  <header></header>
+  <header>
+    {/*FIXME*/}
+  </header>
   <main>
-    {projects.map((project) => <Project entry={project} />)}
+    <section>
+      <h2>Laufende Projekte</h2>
+      {activeProjects.map((project) => <Project entry={project} />)}
+    </section>
+    <section>
+      <h2>Beendete Projekte</h2>
+      {finishedProjects.map((project) => <Project entry={project} />)}
+    </section>
   </main>
 </Layout>
+<style>
+  h2 {
+    text-align: center;
+	font-weight: bold;
+  }
+  section {
+	margin-top: 2em;
+  }
+</style>

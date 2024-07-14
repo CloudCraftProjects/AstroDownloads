@@ -4,7 +4,7 @@ const projects = defineCollection({
   type: "data",
   schema: z.object({
     title: z.string(),
-    start: z.coerce.date(),
+    start: z.coerce.date().optional(),
     end: z.coerce.date().optional(),
     download: z
       .object({

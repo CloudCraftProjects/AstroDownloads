@@ -1,13 +1,36 @@
 ---
-import type { CollectionEntry } from 'astro:content';
+import type { CollectionEntry } from "astro:content";
 
 interface Props {
-	entry: CollectionEntry<'projects'>
+  entry: CollectionEntry<"projects">;
 }
 
 const { entry } = Astro.props;
 ---
 
-<p>
-	{entry.data.title}
-</p>
+<div class="box">
+  <h2>{entry.data.title}</h2>
+  <ul>
+    {entry.data.start && <li>Startpunkt: {entry.data.start}</li>}
+    {entry.data.end && <li>Endpunkt: {entry.data.end}</li>}
+    {entry.data.start && entry.data.end && <li>Laufzeit: {(entry.data.end!.valueOf() - entry.data.start!.valueOf()) / 1000 / 60 / 60 / 24} Tage</li>}
+  </ul>
+</div>
+<style>
+  .box {
+    padding: 1em;
+    max-width: calc(var(--content-width) * 0.8);
+    width: 100%;
+    border: 2px white solid;
+    border-radius: 0.3em;
+    margin: 1em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h2 {
+    font-weight: bold;
+  }
+  ul {
+    padding-left: 1em;
+  }
+</style>
