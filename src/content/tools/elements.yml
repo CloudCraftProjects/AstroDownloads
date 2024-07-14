@@ -1,5 +1,6 @@
 title: Elements
 hidden: true
+description: Das Elements-Plugin für alle CloudCraft Elements Projekte. Aufgrund der technischen Umsetzung können alle Elements-Versionen gleichzeitig unterstützt werden.
 github: https://github.com/CloudCraftProjects/Elements
 download: https://nightly.link/CloudCraftProjects/Elements/workflows/build/master/Elements-Artifacts.zip
 paths:

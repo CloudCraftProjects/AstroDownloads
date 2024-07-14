@@ -1,0 +1,7 @@
+title: LaunchPlates
+description: Ein Plugin um Schleuder-Druckplatten zu erstellen. Richtung und Stärke kann per Befehl oder per API-Schnittstelle verändert werden.
+github: https://github.com/CloudCraftProjects/LaunchPlates
+download: https://nightly.link/CloudCraftProjects/LaunchPlates/workflows/build/master/LaunchPlates-Artifacts.zip
+tags:
+- plugin
+- paper

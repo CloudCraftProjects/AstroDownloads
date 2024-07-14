@@ -1,0 +1,6 @@
+title: InventoryRollback (Fork)
+description: Eine aktualisierte Version von dem älteren Inventory-Rollback Plugin. Speichert Spieler-Inventare regelmäßig ab und lässt Teammitglieder dieser wiederherstellen.
+github: https://github.com/CloudCraftProjects/InventoryRollback
+tags:
+- plugin
+- paper

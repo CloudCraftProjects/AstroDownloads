@@ -1,0 +1,7 @@
+title: CloudBot
+hidden: true
+description: Der Discord-Bot für den CloudCraft Discord. Beinhaltet auch eine API-Schnittstelle, womit andere Plugins an die Discord-API anknüpfen können.
+github: https://github.com/CloudCraftProjects/CloudBot
+tags:
+- plugin
+- paper

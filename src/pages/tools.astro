@@ -7,10 +7,10 @@ import Link from "../components/Link.astro";
 import Icon from "../components/Icon.astro";
 
 // ignore all hidden tools
-const tools = (await getCollection("tools")).filter((tool) => tool.data.download && !tool.data.hidden);
+const tools = (await getCollection("tools")).filter((tool) => !tool.data.hidden);
 ---
 
-<Layout title="Home" description="Übersichtsseite über alle öffentlich verfügbaren Werkzeuge-Downloads" keywords={["tools", "werkzeuge", "plugins"]}>
+<Layout title="Werkzeuge" description="Übersichtsseite über alle öffentlich verfügbaren Werkzeuge-Downloads" keywords={["tools", "werkzeuge", "plugins"]}>
   <Header title="Werkzeuge Downloads" image={{ src: "/assets/logo.webp", alt: "Logo von CloudCraft", width: 240, height: 240 }}>
     <p>Auf dieser Download-Seite findest du alle öffentlich verfügbaren Werkzeuge, welche in CloudCraft-Projekten verwendet werden.</p>
     <p>Falls hier irgendeine Software fehlt oder dich generell was am Server interessiert, kannst du gerne auf unserem <Link icon={["brands", "discord"]} href="https://cloudcraftmc.de/r/discord">Discord</Link> nachfragen.</p>

@@ -25,6 +25,7 @@ const tools = defineCollection({
     title: z.string(),
     description: z.string().optional(),
     hidden: z.coerce.boolean().optional(),
+    archived: z.coerce.boolean().optional(),
     github: z.string(),
     download: z.string().optional(),
     paths: z.array(z.string()).optional(),

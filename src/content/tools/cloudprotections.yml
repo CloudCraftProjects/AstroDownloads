@@ -1,0 +1,7 @@
+title: CloudProtections
+description: Das Beschützer-Plugin für CloudCraft's Projekte. Hiermit können bestimmte Bereiche vor unterschiedlichen Sachen geschützt werden.
+github: https://github.com/CloudCraftProjects/CloudProtections
+download: https://nightly.link/CloudCraftProjects/CloudProtections/workflows/build/master/CloudProtections-Artifacts.zip
+tags:
+- plugin
+- paper
