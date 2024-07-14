@@ -1,20 +1,38 @@
 ---
 import type { CollectionEntry } from "astro:content";
+import FmtDate from "./FmtDate.astro";
+import DownloadButton from "./DownloadButton.astro";
 
 interface Props {
   entry: CollectionEntry<"projects">;
 }
 
 const { entry } = Astro.props;
+
+const durationMs = (entry.data.end?.valueOf() || Date.now()) - entry.data.start!.valueOf();
+const downloadLink = entry.data.download?.link ? `/download/${entry.id}` : undefined;
 ---
 
 <div class="box">
   <h2>{entry.data.title}</h2>
   <ul>
-    {entry.data.start && <li>Startpunkt: {entry.data.start}</li>}
-    {entry.data.end && <li>Endpunkt: {entry.data.end}</li>}
-    {entry.data.start && entry.data.end && <li>Laufzeit: {(entry.data.end!.valueOf() - entry.data.start!.valueOf()) / 1000 / 60 / 60 / 24} Tage</li>}
+    {
+      entry.data.start && (
+        <li>
+          Startpunkt: <FmtDate date={entry.data.start} />
+        </li>
+      )
+    }
+    {
+      entry.data.end && (
+        <li>
+          Endpunkt: <FmtDate date={entry.data.end} />
+        </li>
+      )
+    }
+    {entry.data.start && <li>Laufzeit: {Math.floor(durationMs / 1000 / 60 / 60 / 24)} Tage</li>}
   </ul>
+  {entry.data.download && <DownloadButton {...entry.data.download} link={downloadLink} />}
 </div>
 <style>
   .box {
@@ -32,5 +50,6 @@ const { entry } = Astro.props;
   }
   ul {
     padding-left: 1em;
+    margin-bottom: 0em;
   }
 </style>

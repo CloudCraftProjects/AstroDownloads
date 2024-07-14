@@ -1,0 +1,21 @@
+---
+interface Props {
+  date: Date;
+  timed?: boolean;
+}
+
+const { date, timed } = Astro.props;
+---
+
+<time datetime={date.toISOString()}
+  >{
+    date.toLocaleDateString("de-de", {
+      year: "numeric",
+      month: "long",
+      day: "2-digit",
+      hour: timed ? "2-digit" : undefined,
+      minute: timed ? "2-digit" : undefined,
+      timeZone: "Europe/Berlin",
+    })
+  }</time
+>

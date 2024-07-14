@@ -1,0 +1,56 @@
+---
+import FileSize from "./FileSize.astro";
+import Link from "./Link.astro";
+
+interface Props {
+  size?: number;
+  text?: string;
+  link?: string;
+}
+
+const { size, text, link } = Astro.props;
+---
+
+<div>
+  {
+    link ? (
+      <Link icon={["solid", "download"]} href={link}>
+        {text || "Download"}
+        {size && (
+          <>
+            {" "}
+            (<FileSize bytes={size} />)
+          </>
+        )}
+      </Link>
+    ) : (
+      <>
+        <em>{text || "Download nicht verfügbar"}</em>
+        {size && (
+          <>
+            {" "}
+            (<FileSize bytes={size} />)
+          </>
+        )}
+      </>
+    )
+  }
+</div>
+<style>
+  div {
+    text-align: center;
+    margin-top: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: auto;
+    padding-right: auto;
+    background-color: rgb(53, 90, 82);
+    margin-left: 3em;
+    margin-right: 3em;
+    border-radius: 1em;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+  }
+</style>

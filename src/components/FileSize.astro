@@ -1,0 +1,14 @@
+---
+interface Props {
+  bytes: number;
+  decimals?: number;
+}
+
+const { bytes, decimals = 2 } = Astro.props;
+
+const unitIndex = Math.floor(Math.log(bytes) / Math.log(1024));
+const unit = ["B", "KiB", "MiB", "GiB", "TiB"][unitIndex];
+const value = Number((bytes / Math.pow(1024, unitIndex)).toFixed(decimals));
+---
+
+<span data-bytes={bytes}>{`${value} ${unit}`}</span>
