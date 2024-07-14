@@ -1,0 +1,22 @@
+---
+import Icon from "./Icon.astro";
+
+interface Props {
+  icon: string[];
+  color?: string;
+}
+
+const { icon, color = "#9d1bb5" } = Astro.props;
+---
+
+<span style=`background-color: ${color}`><Icon icon={icon} /> <slot /></span>
+
+<style>
+  span {
+    text-transform: uppercase;
+    padding: 0.3em;
+    border-radius: 0.2em;
+    font-weight: bold;
+    font-size: 0.9em;
+  }
+</style>

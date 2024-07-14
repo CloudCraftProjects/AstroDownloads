@@ -2,6 +2,7 @@
 import type { CollectionEntry } from "astro:content";
 import DownloadButton from "./DownloadButton.astro";
 import Link from "./Link.astro";
+import Badge from "./Badge.astro";
 
 interface Props {
   entry: CollectionEntry<"tools">;
@@ -13,8 +14,28 @@ const downloadLink = entry.data.download ? `/download/tool/${entry.id}` : undefi
 ---
 
 <div class="box">
-  <h3>{entry.data.title}</h3>
-  {entry.data.description && <><span>{entry.data.description}</span><hr /></>}
+  <h3>
+    {entry.data.title}{
+      entry.data.archived && (
+        <>
+          {" "}
+          <Badge icon={["solid", "archive"]} color="#887700">
+            Archiviert
+          </Badge>
+        </>
+      )
+    }
+  </h3>
+  {
+    entry.data.description && (
+      <>
+        <>
+          <span>{entry.data.description}</span>
+          <hr />
+        </>
+      </>
+    )
+  }
   <span>Sourcecode: <Link icon={["brands", "github"]} href={entry.data.github} /></span>
   {entry.data.download && <DownloadButton link={downloadLink} />}
 </div>
