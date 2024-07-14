@@ -1,5 +1,11 @@
 title: CloudCore
+description: Eine generelle Bibliothek für alle CloudCraft-Plugins, welches das Entwickeln erleichtert.
 github: https://github.com/CloudCraftProjects/CloudCore
 download: https://nightly.link/CloudCraftProjects/CloudCore/workflows/build/master/CloudCore-Artifacts.zip
 paths:
 - CloudCore
+tags:
+- library
+- plugin
+- velocity
+- paper

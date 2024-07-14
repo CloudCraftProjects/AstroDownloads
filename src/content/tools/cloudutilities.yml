@@ -1,5 +1,10 @@
 title: CloudUtilities
-github: https://github.com/CloudCraftProjects/CloudPlane
+description: Dieses Plugin beinhaltet generelle nützliche Verwaltungstools für CloudCraft.
+github: https://github.com/CloudCraftProjects/CloudUtilities
 download: https://nightly.link/CloudCraftProjects/CloudUtilities/workflows/build/master/CloudUtilities-Artifacts.zip
 paths:
-- CloudUtilities
+  - CloudUtilities
+tags:
+  - plugin
+  - velocity
+  - paper

@@ -1,5 +1,10 @@
-title: CloudPlane
-github: https://github.com/CloudCraftProjects/CloudPlane
+title: Elements
+hidden: true
+github: https://github.com/CloudCraftProjects/Elements
 download: https://nightly.link/CloudCraftProjects/Elements/workflows/build/master/Elements-Artifacts.zip
 paths:
 - Elements
+tags:
+- project
+- plugin
+- paper

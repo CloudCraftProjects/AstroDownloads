@@ -1,0 +1,29 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+import Tool from "../components/Tool.astro";
+
+// ignore all private tools
+const tools = (await getCollection("tools")).filter((tool) => tool.data.download && !tool.data.hidden);
+---
+
+<Layout title="Home" description="Übersichtsseite über alle öffentlich verfügbaren Tool-Downloads" keywords={["home"]}>
+  <header>
+    {/*FIXME*/}
+  </header>
+  <main>
+    <section>
+      <h2>Verwendete Tools</h2>
+      {tools.map((tool) => <Tool entry={tool} />)}
+    </section>
+  </main>
+</Layout>
+<style>
+  h2 {
+    text-align: center;
+    font-weight: bold;
+  }
+  section {
+    margin-top: 2em;
+  }
+</style>

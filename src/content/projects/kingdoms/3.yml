@@ -3,3 +3,5 @@ start: "2020-10-15"
 end: "2020-11-06"
 download:
   text: "Download verloren"
+tags:
+- kingdoms

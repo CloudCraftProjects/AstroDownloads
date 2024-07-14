@@ -1,5 +1,8 @@
 title: CloudPlane
+description: Die öffentliche Server-Software, welche von CloudCraft genutzt wird.
 github: https://github.com/CloudCraftProjects/CloudPlane
 download: https://nightly.link/CloudCraftProjects/CloudPlane/workflows/build/master/CloudPlane-Artifacts.zip
 paths:
 - CloudPlane
+tags:
+- server

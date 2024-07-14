@@ -4,6 +4,7 @@ const projects = defineCollection({
   type: "data",
   schema: z.object({
     title: z.string(),
+    description: z.string().optional(),
     start: z.coerce.date().optional(),
     end: z.coerce.date().optional(),
     download: z
@@ -14,6 +15,7 @@ const projects = defineCollection({
       })
       .optional(),
     paths: z.array(z.string()).optional(),
+    tags: z.array(z.string()).optional(),
   }),
 });
 
@@ -21,9 +23,12 @@ const tools = defineCollection({
   type: "data",
   schema: z.object({
     title: z.string(),
+    description: z.string().optional(),
+    hidden: z.coerce.boolean().optional(),
     github: z.string(),
     download: z.string().optional(),
     paths: z.array(z.string()).optional(),
+    tags: z.array(z.string()).optional(),
   }),
 });
 

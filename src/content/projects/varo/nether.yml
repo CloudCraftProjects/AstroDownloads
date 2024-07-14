@@ -3,3 +3,5 @@ start: "2020-08-22"
 end: "2020-08-26"
 download:
   text: "Download verloren"
+tags:
+- varo
