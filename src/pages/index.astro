@@ -2,6 +2,8 @@
 import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import Project from "../components/Project.astro";
+import Header from "../components/Header.astro";
+import Link from "../components/Link.astro";
 
 // always ignore all unstarted projects
 const allProjects = (await getCollection("projects")).filter((project) => project.data.start).sort((a, b) => b.data.start!.valueOf() - a.data.start!.valueOf());
@@ -9,10 +11,11 @@ const finishedProjects = allProjects.filter((project) => project.data.end);
 const activeProjects = allProjects.filter((project) => !project.data.end);
 ---
 
-<Layout title="Home" description="Übersichtsseite über alle vergangen Projekte von CloudCraft und deren jeweilige Downloadlinks" keywords={["home"]}>
-  <header>
-    {/*FIXME*/}
-  </header>
+<Layout title="Projekte" description="Übersichtsseite über alle vergangen Projekte von CloudCraft und deren jeweilige Downloadlinks" keywords={["home"]}>
+  <Header title="Projekte Downloads" image={{ src: "/assets/logo.webp", alt: "Logo von CloudCraft", width: 240, height: 240 }}>
+    <p>Auf dieser Download-Seite findest du alle vergangen CloudCraft-Projekte.</p>
+    <p>Falls bei einem Projekt kein Downloadlink verfügbar ist und dich der Download interessiert, kannst du uns das per <Link icon={["brands", "discord"]} href="https://cloudcraftmc.de/r/discord">Discord</Link> mitteilen.</p>
+  </Header>
   <main>
     <section>
       <h2>Laufende Projekte</h2>
@@ -27,9 +30,9 @@ const activeProjects = allProjects.filter((project) => !project.data.end);
 <style>
   h2 {
     text-align: center;
-	font-weight: bold;
+    font-weight: bold;
   }
   section {
-	margin-top: 2em;
+    margin-top: 2em;
   }
 </style>

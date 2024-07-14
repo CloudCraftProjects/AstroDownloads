@@ -2,18 +2,23 @@
 import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import Tool from "../components/Tool.astro";
+import Header from "../components/Header.astro";
+import Link from "../components/Link.astro";
+import Icon from "../components/Icon.astro";
 
-// ignore all private tools
+// ignore all hidden tools
 const tools = (await getCollection("tools")).filter((tool) => tool.data.download && !tool.data.hidden);
 ---
 
-<Layout title="Home" description="Übersichtsseite über alle öffentlich verfügbaren Tool-Downloads" keywords={["home"]}>
-  <header>
-    {/*FIXME*/}
-  </header>
+<Layout title="Home" description="Übersichtsseite über alle öffentlich verfügbaren Werkzeuge-Downloads" keywords={["tools", "werkzeuge", "plugins"]}>
+  <Header title="Werkzeuge Downloads" image={{ src: "/assets/logo.webp", alt: "Logo von CloudCraft", width: 240, height: 240 }}>
+    <p>Auf dieser Download-Seite findest du alle öffentlich verfügbaren Werkzeuge, welche in CloudCraft-Projekten verwendet werden.</p>
+    <p>Falls hier irgendeine Software fehlt oder dich generell was am Server interessiert, kannst du gerne auf unserem <Link icon={["brands", "discord"]} href="https://cloudcraftmc.de/r/discord">Discord</Link> nachfragen.</p>
+    <p>Der Sourcecode vieler Werkzeuge ist öffentlich auf <Icon icon={["brands", "github"]} /> GitHub unter <Link href="https://github.com/CloudCraftProjects">@CloudCraftProjects</Link> verfügbar.</p>
+  </Header>
   <main>
     <section>
-      <h2>Verwendete Tools</h2>
+      <h2>Verwendete Werkzeuge</h2>
       {tools.map((tool) => <Tool entry={tool} />)}
     </section>
   </main>
