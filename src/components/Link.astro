@@ -1,0 +1,47 @@
+---
+import Icon from "./Icon.astro";
+
+interface Props {
+  icon?: string[];
+  href: string;
+  bold?: boolean;
+  noColor?: boolean;
+}
+
+const { icon, href, bold, noColor } = Astro.props;
+
+const classNames = [];
+if (bold) classNames.push("bold");
+if (noColor) classNames.push("no-color");
+const className = classNames.length > 0 ? classNames.join(" ") : undefined;
+---
+
+<a href={href} class={className}>
+  {icon && <Icon icon={icon} />}
+  <slot>{href}</slot></a
+><style>
+  a {
+    text-decoration: none;
+    color: rgb(var(--link-color));
+    transition: color 80ms linear;
+
+    /* reserve space for underlining border */
+    border-bottom: rgba(var(--link-color), 0.4) solid 1px;
+  }
+  a:hover {
+    color: rgb(var(--link-hover-color));
+    border-bottom: rgb(var(--link-hover-color)) solid 1px;
+  }
+  a.bold {
+    font-weight: bold;
+  }
+  a.no-color {
+    --link-color: 255, 255, 255;
+    --link-hover-color: 214, 214, 214;
+  }
+  a:not(.no-color) {
+    --link-color: 218, 246, 255;
+    --link-hover-color: 113, 139, 252;
+  }
+
+</style>

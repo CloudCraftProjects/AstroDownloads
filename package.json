@@ -1,0 +1,22 @@
+{
+  "name": "cloudcraft-downloads",
+  "license": "GPL-3.0-only",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.8.1",
+    "@astrojs/sitemap": "^3.1.6",
+    "astro": "^4.11.5",
+    "astro-purgecss": "^4.1.1",
+    "purgecss": "^6.0.0",
+    "typescript": "^5.5.3"
+  },
+  "packageManager": "yarn@4.3.1"
+}

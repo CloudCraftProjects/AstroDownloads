@@ -1,0 +1,14 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+import Project from "../components/Project.astro";
+
+const projects = await getCollection("projects");
+---
+
+<Layout title="Home" description="Übersichtsseite über alle vergangen Projekte von CloudCraft und deren jeweilige Downloadlinks" keywords={["home"]}>
+  <header></header>
+  <main>
+    {projects.map((project) => <Project entry={project} />)}
+  </main>
+</Layout>

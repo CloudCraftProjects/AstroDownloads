@@ -1,0 +1,33 @@
+---
+import Link from "./Link.astro";
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer>
+  <span>© {currentYear} CloudCraft. Made with {Astro.generator}.</span>
+  <span>NOT AN OFFICIAL MINECRAFT PRODUCT.<br />NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.</span>
+  <span class="links">
+    <Link icon={["solid", "address-card"]} href="https://cloudcraftmc.de/">Homepage</Link>
+  </span>
+</footer>
+<style>
+    footer {
+      flex: 1;
+      padding: 3em;
+      text-align: center;
+      background-color: rgb(33, 37, 41);
+  
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 1em;
+    }
+    .links {
+      display: flex;
+      gap: 1em;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  </style>
