@@ -27,18 +27,18 @@ const downloadLink = entry.data.download?.link ? `/download/${entry.id}` : undef
     {
       entry.data.start && (
         <li>
-          Startpunkt: <FmtDate date={entry.data.start} />
+          {durationMs ? "Startpunkt" : "Datum"}: <FmtDate date={entry.data.start} />
         </li>
       )
     }
     {
-      entry.data.end && (
+      entry.data.end && !!durationMs && (
         <li>
           Endpunkt: <FmtDate date={entry.data.end} />
         </li>
       )
     }
-    {entry.data.start && <li>Laufzeit: {Math.floor(durationMs / 1000 / 60 / 60 / 24)} Tage</li>}
+    {entry.data.start && !!durationMs && <li>Laufzeit: {Math.floor(durationMs / 1000 / 60 / 60 / 24)} Tage</li>}
   </ul>
   {entry.data.download && <DownloadButton {...entry.data.download} link={downloadLink} />}
 </div>
