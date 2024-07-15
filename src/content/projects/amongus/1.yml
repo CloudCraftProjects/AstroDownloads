@@ -3,6 +3,7 @@ start: "2020-11-20"
 end: "2020-11-20"
 download:
   size: 67329843
+  link: https://static2.cloudcraftmc.de/AmongUs.tar.gz
 tags:
 - amongus
 - event
