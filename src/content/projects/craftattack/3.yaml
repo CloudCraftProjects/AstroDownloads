@@ -3,6 +3,7 @@ start: "2020-11-07"
 end: "2021-03-18"
 download:
   size: 9764129883
+  link: https://static8.cloudcraftmc.de/CraftAttack3.tar.gz
 tags:
 - craftattack
 - youtube
