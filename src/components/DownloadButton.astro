@@ -16,7 +16,7 @@ const { size, text, link } = Astro.props;
   link ? (
     <Link href={link}>
       <div class="box">
-        <Icon icon={["solid", "download"]} />
+        <Icon icon={["solid", "download"]} />{" "}
         <span>{text || "Download"}</span>
         {size && (
           <span>
