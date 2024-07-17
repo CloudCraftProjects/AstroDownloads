@@ -1,7 +1,7 @@
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
-
 import purgecss from "astro-purgecss";
+import preact from "@astrojs/preact";
 
 // https://astro.build/config
 export default defineConfig({
@@ -18,6 +18,9 @@ export default defineConfig({
     purgecss({
       fontFace: true,
       keyframes: true,
+    }),
+    preact({
+      devtools: process.env.NODE_ENV !== "production",
     }),
   ],
 });

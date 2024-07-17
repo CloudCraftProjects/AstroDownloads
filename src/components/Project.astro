@@ -2,6 +2,7 @@
 import type { CollectionEntry } from "astro:content";
 import FmtDate from "./FmtDate.astro";
 import DownloadButton from "./DownloadButton.astro";
+import FmtDurationPreact from "./FmtDurationPreact.tsx";
 
 interface Props {
   entry: CollectionEntry<"projects">;
@@ -38,7 +39,13 @@ const downloadLink = entry.data.download?.link ? `/download/${entry.id}` : undef
         </li>
       )
     }
-    {entry.data.start && !!durationMs && <li>Laufzeit: {Math.floor(durationMs / 1000 / 60 / 60 / 24)} Tage</li>}
+    {
+      entry.data.start && !!durationMs && (
+        <li>
+          Laufzeit: <FmtDurationPreact client:load start={entry.data.start} end={entry.data.end} />
+        </li>
+      )
+    }
   </ul>
   {entry.data.download && <DownloadButton {...entry.data.download} link={downloadLink} />}
 </div>
