@@ -1,7 +1,5 @@
-import { Component, createRef, Fragment, type Attributes, type ComponentChild, type ComponentChildren, type Ref } from "preact";
+import { Fragment } from "preact";
 import { useEffect, useState } from "preact/hooks";
-import "preact/debug";
-import "preact/devtools";
 
 interface Props {
   start: Date;
