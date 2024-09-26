@@ -7,7 +7,17 @@ import Link from "../components/Link.astro";
 import Icon from "../components/Icon.astro";
 
 // ignore all hidden tools
-const tools = (await getCollection("tools")).filter((tool) => !tool.data.hidden);
+const tools = (await getCollection("tools"))
+  .filter((tool) => !tool.data.hidden)
+  .sort((t1, t2) => {
+    if (t1.data.archived == t2.data.archived) {
+      if (!t1.data.download == !t2.data.download) {
+        return t1.id.localeCompare(t2.id);
+      }
+      return !!t1.data.download ? -1 : 1;
+    }
+    return t1.data.archived ? 1 : -1;
+  });
 ---
 
 <Layout title="Werkzeuge" description="Übersichtsseite über alle öffentlich verfügbaren Werkzeuge-Downloads" keywords={["tools", "werkzeuge", "plugins"]}>
