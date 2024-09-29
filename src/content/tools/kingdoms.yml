@@ -1,6 +1,7 @@
-title: Kingdoms
-description: Verwaltungsplugin für das fünfte Kingdoms-Projekt - inklusive Team- und Schatzkammerverwaltung.
-github: https://github.com/CloudCraftProjects/Kingdoms
+title: TreasureKingdoms
+archived: true
+description: Verwaltungsplugin für das fünfte Kingdoms-Projekt, inklusive Team- und Schatzkammerverwaltung.
+github: https://github.com/CloudCraftProjects/TreasureKingdoms
 tags:
 - project
 - plugin
