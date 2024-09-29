@@ -11,7 +11,10 @@ export const GET: APIRoute = async () => {
 
   const projects = (await getCollection("projects")).filter((project) => project.data.download && project.data.download.link);
   redirects.push("\n# project downloads");
-  projects.flatMap((project) => `/download/${project.id} ${project.data.download!.link} 303`).forEach((redirect) => redirects.push(redirect));
+  projects
+    .map((project) => `/${project.id} ${project.data.download!.link} 303`)
+    .flatMap((redirect) => [redirect, `/download${redirect}`])
+    .forEach((redirect) => redirects.push(redirect));
   redirects.push("\n# project redirects");
   projects
     .filter((project) => project.data.paths)
@@ -20,7 +23,10 @@ export const GET: APIRoute = async () => {
 
   const tools = (await getCollection("tools")).filter((tool) => tool.data.download);
   redirects.push("\n# tool downloads");
-  tools.flatMap((project) => `/download/tool/${project.id} ${project.data.download!} 303`).forEach((redirect) => redirects.push(redirect));
+  tools
+    .map((project) => `/${project.id} ${project.data.download!} 303`)
+    .flatMap((redirect) => [redirect, `/download/tool${redirect}`])
+    .forEach((redirect) => redirects.push(redirect));
   redirects.push("\n# tool redirects");
   tools
     .filter((project) => project.data.paths)
