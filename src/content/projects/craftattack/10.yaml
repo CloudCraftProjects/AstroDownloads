@@ -3,7 +3,7 @@ start: "2023-10-28"
 end: "2024-07-03"
 download:
   size: 25838221174
-  link: https://static4.cloudcraftmc.de/CraftAttack10.tar.gz
+  link: https://statich01.cloudcraftmc.de/CraftAttack10.tar.gz
 paths:
 - CraftAttack10.tar.gz
 tags:
