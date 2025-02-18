@@ -1,8 +1,12 @@
 title: DeathRun Event
+description: Ein kleineres Event, wo es darum ging, soweit wie möglich zu laufen. Hinweis zum Download: Um den Download in der 1.18 oder höher zu öffnen, lösche vorher den "datapacks"-Ordner!
 start: "2021-07-11"
 end: "2021-07-11"
 download:
-  text: Download verloren
+  size: 506741616
+  link: https://statich01.cloudcraftmc.de/DeathRunEvent.tar.gz
+paths:
+- DeathRunEvent.tar.gz
 tags:
 - deathrun
 - event
