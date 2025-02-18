@@ -1,0 +1,12 @@
+title: Halloween Event
+description: Ein kleineres Event, wo es darum ging, so viele Skelettköpfe wie möglich auf einer selbstgebauten Halloween-Karte zu finden.
+start: "2020-10-31"
+end: "2020-10-31"
+download:
+  size: 13612022
+  link: https://statich01.cloudcraftmc.de/HalloweenEvent.tar.gz
+paths:
+- HalloweenEvent.tar.gz
+tags:
+- halloween
+- event
