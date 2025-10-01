@@ -3,7 +3,7 @@ start: "2024-10-26"
 end: "2025-10-01"
 download:
   size: 58964565488
-  link: https://statich01.cloudcraftmc.de/CraftAttack11.tar.gz
+  link: https://cloudcraft.nbg1.your-objectstorage.com/CraftAttack11.tar.gz
 paths:
 - CraftAttack11.tar.gz
 tags:
