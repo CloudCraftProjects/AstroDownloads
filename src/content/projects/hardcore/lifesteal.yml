@@ -3,7 +3,7 @@ start: "2022-05-28"
 end: "2022-07-29"
 download:
   size: 558908334
-  link: https://statich01.cloudcraftmc.de/Lifesteal.tar.gz
+  link: https://cloudcraft.nbg1.your-objectstorage.com/Lifesteal.tar.gz
 paths:
 - LifeSteal.tar.gz
 tags:

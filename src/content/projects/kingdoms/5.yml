@@ -3,6 +3,6 @@ start: "2021-10-08"
 end: "2022-03-10"
 download:
   size: 514690949
-  link: https://statich01.cloudcraftmc.de/Kingdoms5.tar.gz
+  link: https://cloudcraft.nbg1.your-objectstorage.com/Kingdoms5.tar.gz
 tags:
 - kingdoms

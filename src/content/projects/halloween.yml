@@ -4,7 +4,7 @@ start: "2020-10-31"
 end: "2020-10-31"
 download:
   size: 13612022
-  link: https://statich01.cloudcraftmc.de/HalloweenEvent.tar.gz
+  link: https://cloudcraft.nbg1.your-objectstorage.com/HalloweenEvent.tar.gz
 paths:
 - HalloweenEvent.tar.gz
 tags:
