@@ -3,7 +3,7 @@ start: "2020-12-04"
 end: "2020-12-07"
 download:
   size: 232045725
-  link: https://statich01.cloudcraftmc.de/Anarchy.tar.gz
+  link: https://cloudcraft.nbg1.your-objectstorage.com/Anarchy.tar.gz
 tags:
 - anarchy
 - event

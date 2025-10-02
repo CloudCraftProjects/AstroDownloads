@@ -3,6 +3,6 @@ start: "2020-11-06"
 end: "2020-11-13"
 download:
   size: 59677884
-  link: https://statich01.cloudcraftmc.de/Varo2.tar.gz
+  link: https://cloudcraft.nbg1.your-objectstorage.com/Varo2.tar.gz
 tags:
 - varo
