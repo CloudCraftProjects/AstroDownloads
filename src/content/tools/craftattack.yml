@@ -1,7 +1,7 @@
 title: CraftAttack
 description: Das Projekte-Plugin für CloudCraft's CraftAttack-Projekte mit nützlichen Funktionen für Spieler und Team. Beinhaltet nützliche Teleport-Funktionen für Spieler, aber auch Spawn-Elytra-Funktionen.
 github: https://github.com/CloudCraftProjects/CraftAttack
-download: https://nightly.link/CloudCraftProjects/CraftAttack/workflows/build/master/CraftAttack-Artifacts.zip
+download: https://modrinth.com/plugin/craftattack
 tags:
 - project
 - plugin

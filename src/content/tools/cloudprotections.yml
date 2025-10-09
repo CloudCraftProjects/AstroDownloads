@@ -1,7 +1,7 @@
 title: CloudProtections
 description: Das Beschützungs-Plugin für CloudCraft's Projekte. Hiermit können bestimmte Bereiche wie Quader oder Kugeln vor unterschiedlichen Sachen geschützt werden.
 github: https://github.com/CloudCraftProjects/CloudProtections
-download: https://nightly.link/CloudCraftProjects/CloudProtections/workflows/build/master/CloudProtections-Artifacts.zip
+download: https://modrinth.com/plugin/cloudprotections
 tags:
 - plugin
 - paper

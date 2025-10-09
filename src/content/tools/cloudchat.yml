@@ -1,7 +1,7 @@
 title: CloudChat
 description: Mit CloudChat werden pro Spieler sowohl in Tablist als auch im Chat LuckPerms Prefix und Suffix angezeigt.
 github: https://github.com/CloudCraftProjects/CloudChat
-download: https://nightly.link/CloudCraftProjects/CloudChat/workflows/build/master/CloudChat-Artifacts.zip
+download: https://modrinth.com/plugin/cloudchat
 tags:
 - plugin
 - paper

@@ -1,7 +1,7 @@
 title: CloudUtilities
 description: Dieses Plugin beinhaltet generelle nützliche Verwaltungstools und Spieler-Befehle für CloudCraft wie /reply, aber auch ein Temporäres-Bann-System.
 github: https://github.com/CloudCraftProjects/CloudUtilities
-download: https://nightly.link/CloudCraftProjects/CloudUtilities/workflows/build/master/CloudUtilities-Artifacts.zip
+download: https://modrinth.com/plugin/cloudutilities
 paths:
 - CloudUtilities
 tags:

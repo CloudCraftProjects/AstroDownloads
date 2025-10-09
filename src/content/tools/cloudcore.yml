@@ -1,7 +1,7 @@
 title: CloudCore
 description: Eine generelle Bibliothek für alle CloudCraft-Plugins, welche das Entwickeln erleichtert. Beinhaltet unter anderem ein vereinfachtes Übersetzungs-System und ein Konfigurations-System.
 github: https://github.com/CloudCraftProjects/CloudCore
-download: https://nightly.link/CloudCraftProjects/CloudCore/workflows/build/master/CloudCore-Artifacts.zip
+download: https://modrinth.com/plugin/cloudcore
 paths:
 - CloudCore
 tags:
