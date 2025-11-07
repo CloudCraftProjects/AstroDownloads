@@ -4,7 +4,7 @@ start: "2021-07-11"
 end: "2021-07-11"
 download:
   size: 506741616
-  link: https://cloudcraft.nbg1.your-objectstorage.com/DeathRunEvent.tar.gz
+  link: https://hserv.nbg1.your-objectstorage.com/cloudcraft/DeathRunEvent.tar.gz
 paths:
 - DeathRunEvent.tar.gz
 tags:

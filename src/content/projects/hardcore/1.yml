@@ -3,6 +3,6 @@ start: "2021-02-05"
 end: "2021-03-01"
 download:
   size: 5820316642
-  link: https://cloudcraft.nbg1.your-objectstorage.com/Hardcore.tar.gz
+  link: https://hserv.nbg1.your-objectstorage.com/cloudcraft/Hardcore.tar.gz
 tags:
 - hardcore
