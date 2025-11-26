@@ -2,7 +2,7 @@ title: "CraftAttack 5"
 start: "2021-05-21"
 end: "2021-08-01"
 download:
-  link: https://hserv.nbg1.your-objectstorage.com/cloudcraft/CraftAttack5.tar.gz
+  link: https://s3.cloudcraftmc.de/CraftAttack5.tar.gz
   size: 10914087690
 tags:
 - craftattack

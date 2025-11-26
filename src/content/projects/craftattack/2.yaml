@@ -3,7 +3,7 @@ start: "2020-09-25"
 end: "2020-10-20"
 download:
   size: 1306712478
-  link: https://hserv.nbg1.your-objectstorage.com/cloudcraft/CraftAttack2.tar.gz
+  link: https://s3.cloudcraftmc.de/CraftAttack2.tar.gz
 tags:
 - craftattack
 - youtube

@@ -3,6 +3,6 @@ start: "2021-05-07"
 end: "2021-05-14"
 download:
   size: 83482689
-  link: https://hserv.nbg1.your-objectstorage.com/cloudcraft/BuildBattle2.tar.gz
+  link: https://s3.cloudcraftmc.de/BuildBattle2.tar.gz
 tags:
 - buildbattle

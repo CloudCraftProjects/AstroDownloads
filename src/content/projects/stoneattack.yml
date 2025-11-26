@@ -3,7 +3,7 @@ start: "2022-07-29"
 end: "2022-12-25"
 download:
   size: 63241922
-  link: https://hserv.nbg1.your-objectstorage.com/cloudcraft/StoneAttack.tar.gz
+  link: https://s3.cloudcraftmc.de/StoneAttack.tar.gz
 paths:
 - StoneAttack.tar.gz
 tags:
